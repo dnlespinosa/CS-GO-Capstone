@@ -1,0 +1,22 @@
+CS:GO Price Check API - https://www.programmableweb.com/api/csgo-items-price-rest-api-v2
+Pre Plan - allows the user two options
+To build a loadout that shows a total price of the loadout
+To enter in a total available dollar amount then show available buying options. Can filter based on what equipment looking for. Total available dollar amount will be subtracted when an item is selected 
+PROPOSAL 
+CS GO - Pre Planning 
+The main goal of this website would be allow users to access equipment available in the game from the API and create equipment setups 
+Users should be able to create an account
+When in their account, they should be able to build loadouts, save loadouts and delete loadouts 
+Demographic - Video game enthusiasts. 18-24 years old single. 
+Data I plan on using: 
+Item names
+Item category “rifle, pistol, melee weapon etc” 
+Item icon 
+Item price 
+Approach: 
+Create a database table that stores all usernames, passwords, and user_ids. Then create a many-to-many table that references users by their user_id. This stores their loadout, loadout name and the id of their loadout
+I’d imagine getting all 4 pieces of data I want from each time I try to get it out of the database then referencing the API will give me some challenges 
+I will need to secure user passwords 
+The app should be able to pull up saved user information, pull up all available data from the game and display all needed pieces of information 
+The home page will have a simple login screen to access their account. They will then be redirected to their user page which will have a nav bar at the top and two boxes below. The nav bar will have: create loadout, view saved loadouts, logout. The boxes below: One box will have a list of all saved loadouts that the user has saved. The other box will display all the items in that loadout when clicked. When the user clicks, “create loadout” they will be redirected to a page that has all the available loadout categories listed. Each category will have a dropdown menu of the item to select and the price associated with that item. At the top of the page, users will be able to input available funds. They can input any amount. Whenever they select an item, the price will be subtracted from the available funds number they create. If available funds reach zero, the user will be flashed “You do not have enough funds”. After they are done creating their loadout, they can give it a name then click “Save Loadout”. Upon clicking save loadout, they will be redirected back to the user page where their new loadout will be listed will all the other saved loadouts. 
+To make sure my website is not CRUD, having an in game picture of each item when a user selects that item during “Create Loadout”. I could also create a randomizer loadout option during the “Create Loadout '' option that selects items at random. A stretch goal would be to create a “recommended” loadout option based on available funds and map being played on. That would require researching what the top players use for certain maps. 
